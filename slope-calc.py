@@ -1,8 +1,8 @@
-#This program will help high school students who are strugling to find the the slope of any straight line.
-#This program is not built for any kind of inapropriate tasks. Eductional usage only.
+#This program will help high school students who are struggling to find the slope of any straight line.
+#This program is not built for any kind of inappropriate tasks. Educational usage only.
 import math
 print("Welcome to slope-calc!")
-print("If you have two points of any straight line type \"p\" and if you have an equation of that straight line then type \"e\".")
+print("If you have two points of any straight line type \"p\" and if you have an equation of that straight line then type \"e\" if you have an angle of that straight line with the positive X-Axis then type \"a\" .")
 a=input("type : ")
 
 if a==str("p"):
@@ -18,9 +18,18 @@ if a==str("p"):
 
 elif a==str("e"):
     print("Equation mode")
+    print("check your equation if it's in the standard linear equation ax+by=c")
     xer=float(input("Coefficient of x: "))
     yer=float(input("Coefficient of y: "))
     slopee= -xer/yer
     print("Slope= "+ str(slopee))
+    
+elif a==str("a"):
+    thetadeg=float(input("Angle value in degrees: "))
+    theta1=math.pi*thetadeg
+    thetaf=theta1/180
+    slopea=math.tan(thetaf)
+    print("Slope= "+slopea)
+
 else:
     print("Still working here")
